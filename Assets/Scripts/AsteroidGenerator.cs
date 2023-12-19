@@ -41,6 +41,7 @@ public class AsteroidGenerator : MonoBehaviour
         GameObject newObj = Instantiate(generateList[generateIndex], transform);
 
         Vector2 fromPos = from.transform.position;
+        Vector2 toPos = to.transform.position;
 
         newObj.transform.position = new Vector2(
             rand.Next(
@@ -49,5 +50,13 @@ public class AsteroidGenerator : MonoBehaviour
             ) / epsilon - from.bounds.size.x / 2,
             from.gameObject.transform.position.y
         );
+
+        newObj.GetComponent<CAsteroid>().SetTarget(new Vector2(
+            rand.Next(
+                (int)(toPos.x * epsilon),
+                (int)(toPos.x * epsilon + from.bounds.size.x * epsilon)
+            ) / epsilon - to.bounds.size.x / 2,
+            to.gameObject.transform.position.y
+        ));
     }
 }
