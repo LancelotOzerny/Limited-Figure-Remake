@@ -1,10 +1,10 @@
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] private float speed = 4.0f;
     private PlayerPointsManager points;
+    private bool backMovement = false;
 
     private void Awake()
     {
@@ -30,6 +30,7 @@ public class PlayerMovementController : MonoBehaviour
         }
 
         Transform current = points.Current;
+        KeyDown();
 
         if (current ==  null)
         {
@@ -44,7 +45,23 @@ public class PlayerMovementController : MonoBehaviour
 
         if (distance < 0.1f)
         {
-            points.Next();
+            if (backMovement)
+            {
+                points.Prev();
+            }
+            else
+            {
+                points.Next();
+            }
+        }
+    }
+
+    private void KeyDown()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            backMovement = !backMovement;
+            points.Change();
         }
     }
 }
