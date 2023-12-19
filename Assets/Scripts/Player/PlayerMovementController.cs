@@ -29,10 +29,14 @@ public class PlayerMovementController : MonoBehaviour
             return;
         }
 
-        Transform current = points.Current;
         KeyDown();
+        Move();
+    }
 
-        if (current ==  null)
+    private void Move()
+    {
+        Transform current = points.Current;
+        if (current == null)
         {
             return;
         }
