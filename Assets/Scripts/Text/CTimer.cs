@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CTimer : MonoBehaviour
+public class CTimer : CPrefInteger
 {
     Text text = null;
     int time = 0;
@@ -10,7 +10,8 @@ public class CTimer : MonoBehaviour
     private void Awake()
     {
         text = GetComponent<Text>();
-        SetText();
+        text.text = ToTime(this.time);
+        Load();
     }
 
     private void Update()
@@ -21,11 +22,13 @@ public class CTimer : MonoBehaviour
         {
             timeInterval = 1;
             time++;
-            SetText();
+            text.text = ToTime(this.time);
+            
+            TrySave(time);
         }
     }
 
-    private void SetText()
+    public static string ToTime(int time)
     {
         int minutes = time / 60;
         int seconds = time % 60;
@@ -36,6 +39,6 @@ public class CTimer : MonoBehaviour
         string strSec = seconds > 9 ? "" : "0";
         strSec += seconds;
 
-        text.text = $"{strMin}:{strSec}";
+        return $"{strMin}:{strSec}";
     }
 }
