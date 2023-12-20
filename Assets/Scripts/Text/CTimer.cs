@@ -6,6 +6,7 @@ public class CTimer : CPrefInteger
     Text text = null;
     int time = 0;
     float timeInterval;
+    bool isActive = true;
 
     private void Awake()
     {
@@ -16,6 +17,11 @@ public class CTimer : CPrefInteger
 
     private void Update()
     {
+        if (isActive == false)
+        {
+            return;
+        }
+
         timeInterval -= Time.deltaTime;
 
         if (timeInterval <= 0)
@@ -40,5 +46,10 @@ public class CTimer : CPrefInteger
         strSec += seconds;
 
         return $"{strMin}:{strSec}";
+    }
+
+    public void StopTimer()
+    {
+        isActive = false;
     }
 }
