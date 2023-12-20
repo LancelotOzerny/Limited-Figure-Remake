@@ -21,7 +21,6 @@ public class CBestScore : CPrefInteger
         }
 
         Load();
-        Debug.Log(this.value);
         text.text = CTimer.ToTime(this.value);
     }
 }
