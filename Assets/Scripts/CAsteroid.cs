@@ -7,6 +7,7 @@ public class CAsteroid : MonoBehaviour
     float speed;
     float maxSpeed = 16f;
     float minSpeed = 3f;
+    float roateSpeed = 1.0f;
 
     private static System.Random rand = new System.Random();
     private int epsilon = 10_000;
@@ -19,6 +20,7 @@ public class CAsteroid : MonoBehaviour
     private void Start()
     {
         this.speed = rand.Next((int)(minSpeed * epsilon), (int)(maxSpeed * epsilon)) / epsilon;
+        roateSpeed = rand.Next((int)(-speed / 2 * epsilon), (int)(speed / 2 * epsilon)) / epsilon;
     }
 
     private void Update()
@@ -30,6 +32,8 @@ public class CAsteroid : MonoBehaviour
             this.target, 
             this.speed / distance * Time.deltaTime
         );
+
+        transform.Rotate(new Vector3(0, 0, roateSpeed));
 
         if (distance <= 0.1f)
         {
