@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CTimerBonuse : MonoBehaviour
+public abstract class CTimerBonuse : MonoBehaviour
 {
     [Header("Timer Settings")]
     [SerializeField] private float duration = 1.0f;
     private float startDuration;
     private bool isActive = false;
 
-    [SerializeField] private UnityEvent beginEvent = null;
-    [SerializeField] private UnityEvent endEvent = null;
+    protected abstract void BeginEvent();
+    protected abstract void EndEvent();
 
-    private void Start()
+    protected void Start()
     {
         startDuration = duration;
     }
@@ -20,14 +20,10 @@ public class CTimerBonuse : MonoBehaviour
     {
         isActive = true;
         duration = startDuration;
-
-        if (beginEvent != null)
-        {
-            beginEvent.Invoke();
-        }
+        BeginEvent();
     }
 
-    private void Update()
+    protected void Update()
     {
         if (isActive == false)
         {
@@ -39,11 +35,7 @@ public class CTimerBonuse : MonoBehaviour
         if (duration < 0.0f)
         {
             isActive = false;
-
-            if (endEvent != null)
-            {
-                endEvent.Invoke();
-            }
+            EndEvent();
         }
     }
 }
