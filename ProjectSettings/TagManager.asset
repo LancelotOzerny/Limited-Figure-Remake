@@ -8,6 +8,7 @@ TagManager:
   - bonuse_change_direction
   - bonuse_fast_rabbit
   - bonuse_turtle
+  - bonuse_giant
   layers:
   - Default
   - TransparentFX

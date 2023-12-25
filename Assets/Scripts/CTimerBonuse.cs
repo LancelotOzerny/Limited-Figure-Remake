@@ -19,6 +19,7 @@ public abstract class CTimerBonuse : MonoBehaviour
     {
         if (isActive)
         {
+            duration = startDuration;
             return;
         }
 

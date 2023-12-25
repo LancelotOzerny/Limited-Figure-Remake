@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3549646622591055612}
   - component: {fileID: 6150421710362277976}
   m_Layer: 0
-  m_Name: bonuse_fast_rabbit
-  m_TagString: bonuse_fast_rabbit
+  m_Name: bonuse_giant
+  m_TagString: bonuse_giant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5223834, g: 0.8584906, b: 0.5847051, a: 1}
+  m_Color: {r: 0.9622642, g: 0.4221253, b: 0.4221253, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

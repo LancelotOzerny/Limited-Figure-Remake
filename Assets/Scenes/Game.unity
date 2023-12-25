@@ -924,6 +924,7 @@ GameObject:
   - component: {fileID: 774162579}
   - component: {fileID: 774162581}
   - component: {fileID: 774162582}
+  - component: {fileID: 774162583}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1216,6 +1217,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - name: bonuse_giant
+    destroyTrigger: 1
+    actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 774162583}
+          m_TargetAssemblyTypeName: CTimerBonuse, Assembly-CSharp
+          m_MethodName: Active
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &774162581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1244,6 +1262,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   playerMovement: {fileID: 774162577}
+--- !u!114 &774162583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774162573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c20a67ccddd2047aa96810e6be5c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  player: {fileID: 0}
 --- !u!1 &868513122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,6 +1992,7 @@ MonoBehaviour:
   - {fileID: 3741958271136966561, guid: 23afd3903ff96b649bd8f7f16f319241, type: 3}
   - {fileID: 3741958271136966561, guid: 09f0a6b088036b643afa9114b702f29d, type: 3}
   - {fileID: 3741958271136966561, guid: 106cb4d9cab7deb43a50013388ce20b2, type: 3}
+  - {fileID: 3741958271136966561, guid: f0a4899ac107dee42a9ae6a9e8963f67, type: 3}
 --- !u!4 &1785623174
 Transform:
   m_ObjectHideFlags: 0
