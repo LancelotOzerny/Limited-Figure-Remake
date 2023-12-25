@@ -285,9 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d378f063c25b966469dd911ef9757680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
-  minTime: 0.45
-  maxTime: 1
+  time: 1
+  minTime: 1
+  maxTime: 3
   epsilon: 10000
   fromArea: {fileID: 2060405632}
   generateList:
@@ -922,6 +922,7 @@ GameObject:
   - component: {fileID: 774162580}
   - component: {fileID: 774162578}
   - component: {fileID: 774162579}
+  - component: {fileID: 774162581}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1180,6 +1181,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - name: bonuse_fast_rabbit
+    destroyTrigger: 1
+    actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 774162581}
+          m_TargetAssemblyTypeName: CTimerBonuse, Assembly-CSharp
+          m_MethodName: Active
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &774162581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774162573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 427f718254869d845a4ceae0b4dcedc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+  playerMovement: {fileID: 774162577}
 --- !u!1 &868513122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1926,7 @@ MonoBehaviour:
   fromArea: {fileID: 2043469304}
   generateList:
   - {fileID: 3741958271136966561, guid: 23afd3903ff96b649bd8f7f16f319241, type: 3}
+  - {fileID: 3741958271136966561, guid: 09f0a6b088036b643afa9114b702f29d, type: 3}
 --- !u!4 &1785623174
 Transform:
   m_ObjectHideFlags: 0
@@ -2436,8 +2469,8 @@ Transform:
   m_GameObject: {fileID: 2043469302}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0818, y: 0, z: 0}
+  m_LocalScale: {x: 12.102474, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1785623174}

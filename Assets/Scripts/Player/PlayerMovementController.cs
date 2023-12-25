@@ -6,19 +6,15 @@ public class PlayerMovementController : MonoBehaviour
     private PlayerPointsManager points;
     private bool backMovement = false;
 
+    public float Speed 
+    { 
+        get => speed;
+        set => speed = value;
+    }
+
     private void Awake()
     {
         points = GetComponent<PlayerPointsManager>();
-    }
-
-    public void AddSpeed(float value)
-    {
-        speed += value;
-    }
-
-    public void RemoveSpeed(float value)
-    {
-        speed -= value;
     }
 
     private void Start()

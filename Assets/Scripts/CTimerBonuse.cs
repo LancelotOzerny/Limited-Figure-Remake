@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public abstract class CTimerBonuse : MonoBehaviour
 {
@@ -18,6 +17,11 @@ public abstract class CTimerBonuse : MonoBehaviour
 
     public void Active()
     {
+        if (isActive)
+        {
+            return;
+        }
+
         isActive = true;
         duration = startDuration;
         BeginEvent();
