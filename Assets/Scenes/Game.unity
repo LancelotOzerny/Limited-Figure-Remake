@@ -919,9 +919,9 @@ GameObject:
   - component: {fileID: 774162574}
   - component: {fileID: 774162576}
   - component: {fileID: 774162577}
+  - component: {fileID: 774162580}
   - component: {fileID: 774162578}
   - component: {fileID: 774162579}
-  - component: {fileID: 774162580}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1158,6 +1158,23 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 868513124}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: bonuse_change_direction
+    destroyTrigger: 1
+    actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 774162577}
+          m_TargetAssemblyTypeName: PlayerMovementController, Assembly-CSharp
+          m_MethodName: ChangeDirection
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 

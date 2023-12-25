@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Asteroid
+  - bonuse_change_direction
   layers:
   - Default
   - TransparentFX

@@ -74,8 +74,13 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            backMovement = !backMovement;
-            points.Change();
+            ChangeDirection();
         }
+    }
+
+    public void ChangeDirection()
+    {
+        backMovement = !backMovement;
+        points.Change();
     }
 }
