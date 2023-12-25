@@ -11,6 +11,16 @@ public class PlayerMovementController : MonoBehaviour
         points = GetComponent<PlayerPointsManager>();
     }
 
+    public void AddSpeed(float value)
+    {
+        speed += value;
+    }
+
+    public void RemoveSpeed(float value)
+    {
+        speed -= value;
+    }
+
     private void Start()
     {
         if (points == null && points.Current != null)
