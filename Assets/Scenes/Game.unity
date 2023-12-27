@@ -280,14 +280,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104246629}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d378f063c25b966469dd911ef9757680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
   minTime: 1
-  maxTime: 3
+  maxTime: 2
   epsilon: 10000
   fromArea: {fileID: 2060405632}
   generateList:
@@ -1984,8 +1984,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  minTime: 1
-  maxTime: 2
+  minTime: 3
+  maxTime: 8
   epsilon: 10000
   fromArea: {fileID: 2043469304}
   generateList:
@@ -2516,7 +2516,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
