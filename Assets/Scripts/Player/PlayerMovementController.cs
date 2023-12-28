@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] private float speed = 4.0f;
+    [SerializeField] AudioSource changeDirectionSound = null;
     private PlayerPointsManager points;
     private bool backMovement = false;
 
@@ -78,5 +79,10 @@ public class PlayerMovementController : MonoBehaviour
     {
         backMovement = !backMovement;
         points.Change();
+
+        if (changeDirectionSound != null)
+        {
+            changeDirectionSound.Play();
+        }
     }
 }
