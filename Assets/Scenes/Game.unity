@@ -1218,6 +1218,7 @@ GameObject:
   - component: {fileID: 774162581}
   - component: {fileID: 774162582}
   - component: {fileID: 774162583}
+  - component: {fileID: 774162584}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1287,7 +1288,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.51292074, y: -0.42817852, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1642,6 +1643,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   player: {fileID: 0}
+--- !u!95 &774162584
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774162573}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b6b915a453ccf5941a779b936c3b956c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &868513122
 GameObject:
   m_ObjectHideFlags: 0

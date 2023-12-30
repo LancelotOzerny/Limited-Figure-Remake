@@ -2,25 +2,22 @@ using UnityEngine;
 
 public class BonuseGiant : CTimerBonuse
 {
-    [SerializeField] protected Transform player = null;
-    private Vector2 startScale;
-
+    [SerializeField] private Animator anim = null;
     private void Awake()
     {
-        if (player == null)
+        if (anim == null)
         {
-            player = GetComponent<Transform>();
+            anim = GetComponent<Animator>();
         }
     }
 
     protected override void BeginEvent()
     {
-        startScale = player.transform.localScale;
-        player.transform.localScale = startScale * 1.75f;
+        anim.SetBool("isGiant", true);
     }
 
     protected override void EndEvent()
     {
-        player.transform.localScale = startScale;
+        anim.SetBool("isGiant", false);
     }
 }
