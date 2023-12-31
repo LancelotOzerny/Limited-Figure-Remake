@@ -1132,8 +1132,8 @@ Transform:
   m_GameObject: {fileID: 711120244}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 3.5, z: 0}
-  m_LocalScale: {x: 0.05, y: 7.05, z: 1}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1117831420}
@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   changeDirectionSound: {fileID: 0}
-  points: {fileID: 1117831421}
+  points: {fileID: 1117831423}
 --- !u!61 &774162578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2232,8 +2232,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117831420}
-  - component: {fileID: 1117831421}
   - component: {fileID: 1117831422}
+  - component: {fileID: 1117831423}
   m_Layer: 0
   m_Name: road
   m_TagString: Untagged
@@ -2249,7 +2249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117831418}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2260,23 +2260,7 @@ Transform:
   - {fileID: 1912377358}
   - {fileID: 711120245}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
---- !u!114 &1117831421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117831418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d0e70969eb00d64b8c404e22d9c347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movePoints:
-  - {fileID: 310616928}
-  - {fileID: 713013130}
-  - {fileID: 156689311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1117831422
 Animator:
   serializedVersion: 5
@@ -2298,6 +2282,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1117831423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117831418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa320e95ac26f443800429e527469b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointGroups:
+  - title: line
+    points:
+    - {fileID: 310616928}
+    - {fileID: 713013130}
+  - title: angle
+    points:
+    - {fileID: 310616928}
+    - {fileID: 713013130}
+    - {fileID: 156689311}
+    - {fileID: 713013130}
 --- !u!1 &1134664944
 GameObject:
   m_ObjectHideFlags: 0
