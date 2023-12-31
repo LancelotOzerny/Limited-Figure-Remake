@@ -4,7 +4,7 @@ public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] private float speed = 4.0f;
     [SerializeField] AudioSource changeDirectionSound = null;
-    private PlayerPointsManager points;
+    [SerializeField] private PlayerPointsManager points = null;
     private bool backMovement = false;
 
     public float Speed 
@@ -15,7 +15,10 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Awake()
     {
-        points = GetComponent<PlayerPointsManager>();
+        if (points == null)
+        {
+            points = GetComponent<PlayerPointsManager>();
+        }
     }
 
     private void Start()

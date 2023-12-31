@@ -1210,7 +1210,6 @@ GameObject:
   m_Component:
   - component: {fileID: 774162575}
   - component: {fileID: 774162574}
-  - component: {fileID: 774162576}
   - component: {fileID: 774162577}
   - component: {fileID: 774162580}
   - component: {fileID: 774162578}
@@ -1293,21 +1292,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &774162576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774162573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d0e70969eb00d64b8c404e22d9c347e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movePoints:
-  - {fileID: 310616928}
-  - {fileID: 713013130}
 --- !u!114 &774162577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,6 +1306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   changeDirectionSound: {fileID: 0}
+  points: {fileID: 1117831421}
 --- !u!61 &774162578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2133,6 +2118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1117831420}
   - component: {fileID: 1117831419}
+  - component: {fileID: 1117831421}
   m_Layer: 0
   m_Name: road
   m_TagString: Untagged
@@ -2209,6 +2195,21 @@ Transform:
   - {fileID: 713013130}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117831421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117831418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e70969eb00d64b8c404e22d9c347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePoints:
+  - {fileID: 310616928}
+  - {fileID: 713013130}
 --- !u!1 &1134664944
 GameObject:
   m_ObjectHideFlags: 0
