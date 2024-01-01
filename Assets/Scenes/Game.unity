@@ -2352,7 +2352,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1117831420}
   - component: {fileID: 1117831422}
+  - component: {fileID: 1117831425}
   - component: {fileID: 1117831423}
+  - component: {fileID: 1117831424}
   m_Layer: 0
   m_Name: road
   m_TagString: Untagged
@@ -2433,6 +2435,90 @@ MonoBehaviour:
     - {fileID: 713013130}
     - {fileID: 156689311}
     - {fileID: 1126513350}
+--- !u!114 &1117831424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117831418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea13bb650438e946833eebe70760d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTime: 10
+  maxTime: 20
+  epsilon: 10000
+  events:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1117831425}
+        m_TargetAssemblyTypeName: CAnimBoolParam, Assembly-CSharp
+        m_MethodName: TurnOnBoolean
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isLine
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1117831425}
+        m_TargetAssemblyTypeName: CAnimBoolParam, Assembly-CSharp
+        m_MethodName: TurnOnBoolean
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isAngle
+          m_BoolArgument: 0
+        m_CallState: 2
+  necessarily:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1117831425}
+        m_TargetAssemblyTypeName: CAnimBoolParam, Assembly-CSharp
+        m_MethodName: TurnOffBoolean
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isLine
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1117831425}
+        m_TargetAssemblyTypeName: CAnimBoolParam, Assembly-CSharp
+        m_MethodName: TurnOffBoolean
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isAngle
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1117831425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117831418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d11408cc0ed124699734464a675285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &1126513349
 GameObject:
   m_ObjectHideFlags: 0
