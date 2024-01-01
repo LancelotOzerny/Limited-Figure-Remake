@@ -63,6 +63,11 @@ public class PointsManager : MonoBehaviour
                 break;
             }
         }
+
+       if (currentIndex >= pointGroups[currentGroup].Count)
+        {
+            currentIndex = 0;
+        }
     }
 
     public bool IsCorrect()
