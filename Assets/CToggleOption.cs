@@ -12,13 +12,21 @@ public class CToggleOption : CPrefValueBool
     public override void Load()
     {
         base.Load();
-        toggle.isOn = this.current_value;
         Action();
+
+        if (toggle != null)
+        {
+            toggle.isOn = this.current_value;
+        }
     }
 
     public void Change()
     {
-        this.current_value = toggle.isOn;
+        if (toggle != null)
+        {
+            this.current_value = toggle.isOn;
+        }
+
         Action();
         Save();
     }
